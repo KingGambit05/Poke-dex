@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="line"></div>
+        <section class="container">
+          <div class="controls">
+            <div class="upper-control">
+              <div class="big-blue"></div>
+              <div class="small-dot"></div>
+              <div class="small-dot"></div>
+              <div class="small-dot"></div>
+            </div>
+            <div class="screen">
+              <div class="search">
+                <input type="search" placeholder="SEARCH:" id="search-box" />
+                <button id="search-button">GO</button>
+              </div>
+
+              <div id="pokemon-card"></div>
+
+              <table id="pokemon-table">
+                <thead>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                </thead>
+                <tbody>
+                  <tr></tr>
+                </tbody>
+              </table>
+              <span id="page-label">PAGE 1/X</span>
+            </div>
+
+            <div class="lower-control">
+              <div class="joystick">
+                <button onclick="upPage()">▲</button>
+                <div id="left-right">
+                  <button onclick="prevPage()">◀</button>
+                  <button onclick="nextPage()">▶</button>
+                </div>
+                <button onclick="downPage()">▼</button>
+              </div>
+              <div class="menu">
+                <button>MODE</button>
+                <button>SORT</button>
+              </div>
+              <div class="auth">
+                <button id="red" onclick="pressPop()">A</button>
+                <button id="blue" onclick="pressHide()">B</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="line"></div>
+      </div>
+    </main>
+    <script src="pokedex.js"></script>
+  </body>
+</html>
